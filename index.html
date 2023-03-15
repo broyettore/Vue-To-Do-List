@@ -20,19 +20,22 @@
 
     <div id="app" v-cloak>
 
-      <header>
-        <div class="container py-3 d-flex justify-content-between align-items-center">
+      <header class="d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between">
           <div class="site-title">
             <h1 class="fs-4">Shopping</h1>
           </div>
-          <nav class="d-flex justify-content-center">
-            <ul class="d-flex">
+          <nav class="d-lg-flex justify-content-center" :class="{show : isShow}">
+            <ul class="d-block d-lg-flex">
               <li class="px-2"><a href="#">Services</a></li>
               <li class="px-2"><a href="#">Gallery</a></li>
               <li class="px-2"><a href="#">About</a></li>
               <li class="px-2"><a href="#">Contact</a></li>
             </ul>
           </nav>
+          <div class="bar d-flex justify-content-center align-items-center d-lg-none">
+            <i class="fa-solid fa-bars fs-5" @click="showToggle"></i>
+          </div>
           <div class="icon-ctn text-end">
             <i class="fa-regular fa-star px-2"></i>
             <i class="fa-solid fa-user px-2"></i>
@@ -43,7 +46,7 @@
 
 
       <main>
-        <div class="container d-flex align-items-center">
+        <div class="container d-flex align-items-start justify-content-center">
           <div class="left">
             <div class="input-group mb-3">
               <input type="text" class="form-control ms-type-bar" v-model="toDoAdd" @keyup.enter="addToDoList" placeholder="To Do ..." aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -58,7 +61,6 @@
               </li>
             </ul>
           </div>
-          <div class="right"></div>
         </div>
       </main>
 

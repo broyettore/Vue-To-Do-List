@@ -43,9 +43,38 @@ a, button, i {
 /********* HEADER*********/
 header nav,
 header  .icon-ctn,
-header  .site-title {
+header  .site-title,
+header .bar {
     width: calc(100% / 3);
 }
+
+header > .container {
+    position: relative;
+}
+
+header nav {
+    position: absolute;
+    top: 60px;
+    left: -200%;
+    width: 100%;
+    z-index: 10;
+    transition: left 1s;
+}
+
+header nav ul li{
+    background-color: brown;
+    padding: 5px;
+}
+
+header nav ul li:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+
+.show {
+    left: 0;
+}
+
 
 /********* MAIN *********/
 
@@ -58,9 +87,9 @@ main .container {
     width: 100%;
 }
 
-main .left,
-main .right {
+main .left {
     width: 40%;
+    margin-top: 15%;
 }
 
 .list-group > .ms-li {
@@ -98,7 +127,25 @@ main .right {
 }
 
 main ul li span {
-    cursor: pointer;;
+    cursor: pointer;
+}
+
+
+/********* MEDIA QUERIES *********/
+
+@media screen and (min-width: 992px) {
+
+    header nav {
+        position: static;
+        width: auto;
+        z-index: 0;
+    }
+    
+    header nav ul li{
+        background-color: #412120;
+        padding: 0;
+    }
+
 }
 
 

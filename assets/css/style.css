@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #412120;
+    color: #f7ead1;
+}
+
 /********* COMMON *********/
 
 h1, h2, h3, h4, h5, h6, ul, li {
@@ -13,7 +18,43 @@ h1, h2, h3, h4, h5, h6, ul, li {
     padding: 0;
 }
 
-[ v-cloak ] {
+[v-cloak] {
     display: none;
 }
+
+ul li {
+    list-style-type: none;
+}
+
+header, footer {
+    height: 60px;
+}
+
+a {
+    font-size: 1.1rem;
+    color: #f7ead1;
+    text-decoration: none;
+}
+
+
+
+/********* HEADER*********/
+header nav,
+header  .icon-ctn,
+header  .site-title {
+    width: calc(100% / 3);
+}
+
+
+/********* MAIN *********/
+
+main {
+    height: calc(100vh - 60px);
+}
+
+main .container {
+    height: 100%;
+    width: 100%;
+}
+
 

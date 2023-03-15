@@ -57,4 +57,40 @@ main .container {
     width: 100%;
 }
 
+main .left,
+main .right {
+    width: 40%;
+}
+
+.list-group > .ms-li {
+    background-color: #412120;
+    color: #f7ead1;
+    border: 0;
+    padding: 10px 3px;
+}
+
+.ms-type-bar {
+    background-color: #f7ead1;
+    color: #412120;
+}
+
+.ms-type-bar:focus {
+    box-shadow: none;
+    background-color: #f7ead1;
+    border-color: #f7ead1;
+}
+
+.ms-type-btn {
+    background-color: burlywood;
+    color: #412120;
+    border: none;
+}
+
+.ms-type-btn:hover {
+    background-color: transparent;
+    border: 1px solid #f7ead1;
+    color: #f7ead1;
+}
+
+
 

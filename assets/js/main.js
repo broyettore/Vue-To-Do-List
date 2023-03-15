@@ -28,7 +28,7 @@ createApp({
             toDoList: [
                 {
                     text: "Andare un palestra",
-                    done: true
+                    done: false
                 },
                 {
                     text: "Ritirare un pacco",
@@ -50,9 +50,10 @@ createApp({
             }
         },
 
-        // removeToDoLIst(index) {
-        //     this.toDoList.splice(index, 1)
-        // }
+        cancelList(element) {
+            this.toDoList.splice(element, 1)
+        }
+
 
     }
 }).mount("#app")

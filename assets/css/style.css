@@ -36,7 +36,9 @@ a {
     text-decoration: none;
 }
 
-
+a, button, i {
+    cursor: pointer;
+}
 
 /********* HEADER*********/
 header nav,
@@ -44,7 +46,6 @@ header  .icon-ctn,
 header  .site-title {
     width: calc(100% / 3);
 }
-
 
 /********* MAIN *********/
 
@@ -90,6 +91,10 @@ main .right {
     background-color: transparent;
     border: 1px solid #f7ead1;
     color: #f7ead1;
+}
+
+.taskDone {
+    text-decoration: line-through;
 }
 
 

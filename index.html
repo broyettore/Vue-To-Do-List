@@ -46,11 +46,16 @@
         <div class="container d-flex align-items-center">
           <div class="left">
             <div class="input-group mb-3">
-              <input type="text" class="form-control ms-type-bar" placeholder="To Do ..." aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary ms-type-btn" type="button" id="button-addon2">Go!</button>
+              <input type="text" class="form-control ms-type-bar" v-model="toDoAdd" placeholder="To Do ..." aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary ms-type-btn" @click="addToDoList" type="button" id="button-addon2">Go!</button>
             </div>
             <ul class="list-group">
-              <li class="list-group-item ms-li" v-for="(todo, index) in toDoList">{{ todo.text }}</li>
+              <li class="list-group-item ms-li d-flex justify-content-between align-items-center" :class="{ taskDone : todo.done }" v-for="(todo, index) in toDoList">
+                {{ todo.text }}
+                <div class="cancel-ctn">
+                  <i class="fa-solid fa-xmark" @click="removeToDoList(index)"></i>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="right"></div>

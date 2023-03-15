@@ -24,20 +24,35 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            toDoAdd: "",
             toDoList: [
                 {
-                    text: "Andare un palestra"
+                    text: "Andare un palestra",
+                    done: true
                 },
                 {
-                    text: "Ritirare un pacco"
+                    text: "Ritirare un pacco",
+                    done: false
                 },
                 {
-                    text: "Visita dal dentista"
+                    text: "Visita dal dentista",
+                    done: false
                 }
             ]
         }
     },
     methods: {
-        // a 
+
+        addToDoList() {
+            if (this.toDoAdd.trim().toLowerCase() !== "" ) {
+                this.toDoList.push({text: this.toDoAdd});
+                this.toDoAdd = "";
+            }
+        },
+
+        // removeToDoLIst(index) {
+        //     this.toDoList.splice(index, 1)
+        // }
+
     }
 }).mount("#app")

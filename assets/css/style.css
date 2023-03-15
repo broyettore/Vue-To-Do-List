@@ -97,5 +97,9 @@ main .right {
     text-decoration: line-through;
 }
 
+main ul li span {
+    cursor: pointer;;
+}
+
 
 

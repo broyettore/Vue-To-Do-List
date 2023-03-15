@@ -50,8 +50,8 @@
               <button class="btn btn-outline-secondary ms-type-btn" @click="addToDoList" type="button" id="button-addon2">Go!</button>
             </div>
             <ul class="list-group">
-              <li class="list-group-item ms-li d-flex justify-content-between align-items-center" :class="{ taskDone : todo.done }" v-for="(todo, index) in toDoList">
-                {{ todo.text }}
+              <li class="list-group-item ms-li d-flex justify-content-between align-items-center" v-for="(todo, index) in toDoList">
+                <span @click="crossDone(todo)" :class="{ taskDone : todo.done }">{{ todo.text }}</span>
                 <div class="cancel-ctn">
                   <i class="fa-solid fa-xmark" @click=" cancelList(todo)"></i>
                 </div>

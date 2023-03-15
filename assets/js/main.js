@@ -28,15 +28,15 @@ createApp({
             toDoList: [
                 {
                     text: "Andare un palestra",
-                    done: false
+                    done: "",
                 },
                 {
                     text: "Ritirare un pacco",
-                    done: false
+                    done: "",
                 },
                 {
                     text: "Visita dal dentista",
-                    done: false
+                    done: "",
                 }
             ]
         }
@@ -45,13 +45,23 @@ createApp({
 
         addToDoList() {
             if (this.toDoAdd.trim().toLowerCase() !== "" ) {
-                this.toDoList.push({text: this.toDoAdd});
+                this.toDoList.push({text: this.toDoAdd, done: ""});
                 this.toDoAdd = "";
             }
         },
 
         cancelList(element) {
             this.toDoList.splice(element, 1)
+        },
+
+        crossDone(element) {
+            if (element.done === "" || element.done === false) {
+                element.done = true;
+            } else {
+                element.done = false
+            }
+
+            console.log(element.done)
         }
 
 
